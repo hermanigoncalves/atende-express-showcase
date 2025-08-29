@@ -8,37 +8,37 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Atende Express Brand Colors */
-    --background: 0 0% 5%; /* Dark background */
-    --foreground: 0 0% 95%; /* Light text */
+    /* Atende Express Brand Colors - Nova Paleta */
+    --background: 220 50% 15%; /* Azul-Marinho para fundo */
+    --foreground: 0 0% 95%; /* Cinza claro/Branco para texto */
 
-    --card: 0 0% 8%;
+    --card: 220 40% 18%;
     --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 8%;
+    --popover: 220 40% 18%;
     --popover-foreground: 0 0% 95%;
 
-    /* Deep Blue (ATENDE) */
-    --primary: 210 100% 25%;
+    /* Azul-Vibrante para títulos e ícones */
+    --primary: 210 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    /* Orange (EXPRESS) */
-    --secondary: 16 100% 50%;
+    /* Laranja-Energético para botões de ação */
+    --secondary: 25 100% 55%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 220 30% 25%;
+    --muted-foreground: 0 0% 70%;
 
-    /* Blue gradient accent */
-    --accent: 200 100% 50%;
+    /* Azul-Vibrante para destaques */
+    --accent: 210 100% 50%;
     --accent-foreground: 0 0% 100%;
 
-    /* Neon Green for highlights */
-    --neon: 75 100% 65%;
+    /* Laranja-Energético para highlights */
+    --neon: 25 100% 55%;
     --neon-foreground: 0 0% 10%;
 
-    /* Yellow (lightning) */
-    --warning: 48 100% 50%;
+    /* Laranja-Energético para ações importantes */
+    --warning: 25 100% 55%;
     --warning-foreground: 0 0% 10%;
 
     --destructive: 0 84.2% 60.2%;
@@ -50,42 +50,42 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(210 100% 25%), hsl(200 100% 50%));
-    --gradient-accent: linear-gradient(135deg, hsl(16 100% 50%), hsl(48 100% 50%));
-    --gradient-hero: linear-gradient(135deg, hsl(0 0% 5%), hsl(0 0% 10%));
+    /* Gradients - Nova Paleta */
+    --gradient-primary: linear-gradient(135deg, hsl(220 50% 15%), hsl(210 100% 50%));
+    --gradient-accent: linear-gradient(135deg, hsl(25 100% 55%), hsl(210 100% 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 50% 15%), hsl(220 40% 20%));
     
-    /* Shadows */
-    --shadow-neon: 0 0 20px hsl(75 100% 65% / 0.3);
-    --shadow-primary: 0 10px 30px hsl(210 100% 25% / 0.2);
+    /* Shadows - Nova Paleta */
+    --shadow-neon: 0 0 20px hsl(25 100% 55% / 0.3);
+    --shadow-primary: 0 10px 30px hsl(210 100% 50% / 0.2);
   }
 
   .light {
     --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
+    --foreground: 220 50% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 10%;
+    --card-foreground: 220 50% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 10%;
+    --popover-foreground: 220 50% 15%;
 
-    --primary: 210 100% 25%;
+    --primary: 210 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 16 100% 50%;
+    --secondary: 25 100% 55%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted-foreground: 220 30% 40%;
 
-    --accent: 200 100% 50%;
+    --accent: 210 100% 50%;
     --accent-foreground: 0 0% 100%;
 
-    --neon: 75 100% 45%;
+    --neon: 25 100% 55%;
     --neon-foreground: 0 0% 100%;
 
-    --warning: 48 100% 50%;
+    --warning: 25 100% 55%;
     --warning-foreground: 0 0% 10%;
 
     --destructive: 0 84.2% 60.2%;

@@ -59,6 +59,22 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				// Nova Paleta Atende Express
+				'navy-blue': {
+					DEFAULT: 'hsl(220 50% 15%)', // Azul-Marinho
+					light: 'hsl(220 40% 25%)',
+					dark: 'hsl(220 60% 10%)'
+				},
+				'vibrant-blue': {
+					DEFAULT: 'hsl(210 100% 50%)', // Azul-Vibrante
+					light: 'hsl(210 100% 60%)',
+					dark: 'hsl(210 100% 40%)'
+				},
+				'energetic-orange': {
+					DEFAULT: 'hsl(25 100% 55%)', // Laranja-Energético
+					light: 'hsl(25 100% 65%)',
+					dark: 'hsl(25 100% 45%)'
 				}
 			},
 			backgroundImage: {
