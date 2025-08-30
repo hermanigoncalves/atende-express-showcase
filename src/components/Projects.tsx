@@ -86,7 +86,7 @@ const Projects = () => {
               {/* Project Header */}
               <CardHeader className="pb-4">
                 <div className="flex items-start justify-between mb-4">
-                  <Badge variant="outline" className="text-xs font-medium">
+                  <Badge variant="outline" className="text-xs font-medium bg-green-50 text-green-700 border-green-200">
                     {project.category}
                   </Badge>
                   <div className={`p-3 rounded-xl bg-gradient-to-r ${project.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
@@ -95,7 +95,7 @@ const Projects = () => {
                 </div>
                 
                 <div>
-                  <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors mb-2">
+                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors mb-2">
                     {project.title}
                   </h3>
                   <p className="text-sm text-black font-medium mb-4">
@@ -112,10 +112,10 @@ const Projects = () => {
                 
                 {/* Technologies */}
                 <div className="space-y-3">
-                  <h4 className="font-semibold text-foreground text-sm">Tecnologias Utilizadas:</h4>
+                  <h4 className="font-semibold text-gray-900 text-sm">Tecnologias Utilizadas:</h4>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, techIndex) => (
-                      <Badge key={techIndex} variant="secondary" className="text-xs bg-gray-100 text-gray-700">
+                      <Badge key={techIndex} variant="secondary" className="text-xs bg-gray-200 text-gray-800 border border-gray-300">
                         {tech}
                       </Badge>
                     ))}
@@ -124,7 +124,7 @@ const Projects = () => {
                 
                 {/* Results */}
                 <div className="space-y-3">
-                  <h4 className="font-semibold text-foreground text-sm flex items-center">
+                  <h4 className="font-semibold text-gray-900 text-sm flex items-center">
                     <TrendingUp className="h-4 w-4 mr-2 text-green-500" />
                     Resultados Alcançados:
                   </h4>

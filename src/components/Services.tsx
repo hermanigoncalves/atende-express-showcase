@@ -79,7 +79,7 @@ const Services = () => {
                       <service.icon className="h-8 w-8 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">
                         {service.title}
                       </h3>
                       <p className="text-sm text-black font-medium">
@@ -87,7 +87,7 @@ const Services = () => {
                       </p>
                     </div>
                   </div>
-                  <Badge variant="outline" className="text-xs">
+                  <Badge variant="outline" className="text-xs bg-blue-50 text-blue-700 border-blue-200">
                     Premium
                   </Badge>
                 </div>
@@ -100,7 +100,7 @@ const Services = () => {
                 
                 {/* Features List */}
                 <div className="space-y-3">
-                  <h4 className="font-semibold text-foreground text-sm">Principais Benefícios:</h4>
+                  <h4 className="font-semibold text-gray-900 text-sm">Principais Benefícios:</h4>
                   <div className="grid grid-cols-2 gap-2">
                     {service.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center space-x-2">

@@ -66,15 +66,15 @@ const Hero = () => {
                   {words[currentWord]}
                 </span>
                 <span className="block text-white/90 text-3xl md:text-4xl lg:text-5xl font-medium">
-                  que Converte Mais
+                  que Vende Mais
                 </span>
               </h1>
             </div>
               
             {/* Description */}
             <p className="text-xl md:text-2xl text-white/80 leading-relaxed max-w-3xl">
-              Transformamos seu atendimento com <span className="text-vibrant-blue font-semibold">IA avançada</span> e 
-              <span className="text-energetic-orange font-semibold">sites de alta conversão</span>. 
+              Transformamos seu atendimento com <span className="text-white/80 font-semibold">IA avançada</span> e 
+              <span className="text-white/80 font-semibold">sites de alta conversão</span>. 
               Resultados comprovados em mais de 100 projetos.
             </p>
             
