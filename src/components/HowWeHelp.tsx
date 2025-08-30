@@ -115,7 +115,7 @@ const HowWeHelp = () => {
                       <area.icon className="h-10 w-10 text-white" />
                     </div>
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors mb-2">
+                  <h3 className="text-2xl font-bold text-blue-600 group-hover:text-primary transition-colors mb-2">
                     {area.title}
                   </h3>
                   <p className="text-sm text-black font-medium">
@@ -219,26 +219,12 @@ const HowWeHelp = () => {
                 </p>
               </div>
               
-              <div className="grid gap-6">
-                {contactInfo.map((info, index) => (
-                  <Card key={index} className="p-6 hover:shadow-lg transition-all duration-300 border-2 hover:border-accent/30">
-                    <div className="flex items-center space-x-4">
-                      <div className="p-3 bg-gradient-to-r from-accent to-secondary rounded-xl">
-                        <info.icon className="h-6 w-6 text-white" />
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-foreground">{info.label}</h4>
-                        <p className="text-muted-foreground">{info.value}</p>
-                      </div>
-                    </div>
-                  </Card>
-                ))}
-              </div>
+
             </div>
             
             {/* Contact Form */}
             <Card className="p-8 border-2 border-primary/20 bg-gradient-to-br from-white to-gray-50/50">
-              <h3 className="text-2xl font-bold text-foreground mb-6">Solicite um Orçamento</h3>
+              <h3 className="text-2xl font-bold text-black mb-6">Solicite um Orçamento</h3>
               <form className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
@@ -268,7 +254,7 @@ const HowWeHelp = () => {
                     <option>Selecione um serviço</option>
                     <option>Site Responsivo</option>
                     <option>Agente de IA</option>
-                    <option>Automação Omnichannel</option>
+
                     <option>Consultoria UX/UI</option>
                     <option>Todos os Serviços</option>
                   </select>

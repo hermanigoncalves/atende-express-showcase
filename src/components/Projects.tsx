@@ -6,55 +6,38 @@ import { ExternalLink, Calendar, ShoppingCart, MessageCircle, TrendingUp, Clock,
 const Projects = () => {
   const projects = [
     {
-      title: "Agente Virtual – Clínica Médica",
-      subtitle: "Sistema de Agendamento Inteligente",
-      description: "Sistema de agendamento automatizado com IA para otimizar consultas médicas e reduzir tempo de espera em 70%.",
+      title: "Bella Estética – Clínica de Beleza",
+      subtitle: "Desperte sua Beleza Natural",
+      description: "Site completo para clínica de estética com mais de 10 anos de experiência, oferecendo tratamentos personalizados em ambiente acolhedor e sofisticado.",
       image: "/placeholder-project-1.jpg",
-      link: "#",
-      icon: Calendar,
-      category: "IA & Automação",
-      technologies: ["React", "Node.js", "IA", "WhatsApp API"],
+      link: "https://estetica.atendeexspress.com.br/",
+      icon: Star,
+      category: "Estética & Beleza",
+      technologies: ["React", "Tailwind", "Responsive", "SEO"],
       results: [
-        { label: "Redução no tempo de espera", value: "70%" },
-        { label: "Agendamentos automatizados", value: "95%" },
-        { label: "Satisfação do cliente", value: "4.8/5" }
+        { label: "Anos de experiência", value: "10+" },
+        { label: "Satisfação dos clientes", value: "4.9/5" },
+        { label: "Tratamentos oferecidos", value: "15+" }
       ],
-      color: "from-blue-500 to-cyan-500",
-      bgGradient: "bg-gradient-to-br from-blue-50 to-cyan-50"
+      color: "from-pink-500 to-rose-500",
+      bgGradient: "bg-gradient-to-br from-pink-50 to-rose-50"
     },
     {
-      title: "E-commerce Responsivo – Loja Fashion",
-      subtitle: "Plataforma de Vendas Otimizada",
-      description: "Plataforma completa de vendas online com UX otimizada que aumentou as conversões em 150% e o ticket médio em 80%.",
+      title: "TechShop – Periféricos Gaming",
+      subtitle: "Periféricos de Elite",
+      description: "Loja online especializada em periféricos gaming e profissionais com coleção premium de teclados, mouses, headsets e monitores para elevar sua experiência.",
       image: "/placeholder-project-2.jpg", 
-      link: "#",
+      link: "https://gamer-gear-gallery.lovable.app",
       icon: ShoppingCart,
-      category: "E-commerce",
-      technologies: ["Next.js", "Stripe", "Tailwind", "Analytics"],
+      category: "E-commerce Gaming",
+      technologies: ["React", "Tailwind", "E-commerce", "Responsive"],
       results: [
-        { label: "Aumento nas conversões", value: "150%" },
-        { label: "Crescimento do ticket médio", value: "80%" },
-        { label: "Tempo de carregamento", value: "<2s" }
+        { label: "Produtos disponíveis", value: "6+" },
+        { label: "Ofertas limitadas", value: "25%" },
+        { label: "Avaliação média", value: "4.8/5" }
       ],
-      color: "from-purple-500 to-pink-500",
-      bgGradient: "bg-gradient-to-br from-purple-50 to-pink-50"
-    },
-    {
-      title: "Chatbot Omnichannel – Empresa de Logística",
-      subtitle: "Atendimento Integrado 24/7",
-      description: "Integração inteligente entre WhatsApp, site e telefone para atendimento 24/7 automatizado com 90% de resolução.",
-      image: "/placeholder-project-3.jpg",
-      link: "#",
-      icon: MessageCircle,
-      category: "Automação",
-      technologies: ["Python", "WhatsApp", "Telegram", "CRM"],
-      results: [
-        { label: "Taxa de resolução", value: "90%" },
-        { label: "Redução de custos", value: "60%" },
-        { label: "Tempo de resposta", value: "<30s" }
-      ],
-      color: "from-green-500 to-emerald-500",
-      bgGradient: "bg-gradient-to-br from-green-50 to-emerald-50"
+      color: "from-blue-500 to-purple-500",
+      bgGradient: "bg-gradient-to-br from-blue-50 to-purple-50"
     }
   ];
 
@@ -80,7 +63,7 @@ const Projects = () => {
         </div>
         
         {/* Projects Grid */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {projects.map((project, index) => (
             <Card key={index} className="group hover:shadow-2xl transition-all duration-500 border-2 hover:border-primary/30 hover:-translate-y-2 bg-white overflow-hidden">
               {/* Project Header */}
@@ -142,7 +125,7 @@ const Projects = () => {
                 <Button 
                   variant="outline" 
                   className="w-full group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300"
-                  onClick={scrollToContact}
+                  onClick={() => window.open(project.link, '_blank')}
                 >
                   Ver Mais Detalhes
                   <ExternalLink className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -166,10 +149,7 @@ const Projects = () => {
             <div className="text-3xl font-bold text-purple-600 mb-2">24h</div>
             <div className="text-sm text-black">Tempo de Resposta</div>
           </div>
-          <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl border border-orange-200">
-            <div className="text-3xl font-bold text-orange-600 mb-2">10+</div>
-            <div className="text-sm text-black">Anos de Experiência</div>
-          </div>
+
         </div>
 
         {/* Bottom CTA */}

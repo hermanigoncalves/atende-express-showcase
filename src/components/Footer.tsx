@@ -72,7 +72,7 @@ const Footer = () => {
             <ul className="space-y-3 text-white/70">
               <li>Sites Responsivos</li>
               <li>Agentes de IA</li>
-              <li>Automação Omnichannel</li>
+              
               <li>Consultoria UX/UI</li>
               <li>Experiência do Cliente</li>
             </ul>
@@ -90,10 +90,7 @@ const Footer = () => {
                 <Mail className="h-4 w-4 text-vibrant-blue" />
                 <span>contato.atendeexpress@gmail.com</span>
               </div>
-              <div className="flex items-start space-x-3 text-white/70">
-                <MapPin className="h-4 w-4 text-vibrant-blue mt-1" />
-                <span>São Paulo, SP<br />Brasil</span>
-              </div>
+
             </div>
             
             {/* Newsletter */}

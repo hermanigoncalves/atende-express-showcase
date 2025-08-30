@@ -39,7 +39,7 @@ const About = () => {
             </p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
+          <div className="max-w-4xl mx-auto mb-16">
             {/* Left Content */}
             <div className="space-y-6">
               <div className="space-y-4">
@@ -75,23 +75,7 @@ const About = () => {
               </div>
             </div>
             
-            {/* Right Content - Experience Card */}
-            <div className="flex justify-center">
-              <div className="relative">
-                <Card className="bg-gradient-to-br from-primary to-secondary text-white border-0 shadow-2xl">
-                  <CardContent className="p-8 text-center">
-                    <img 
-                      src="/D_NQ_NP_850080-MLB85365430349_052025-O.jpeg" 
-                      alt="Atende Express" 
-                      className="w-full h-auto object-contain rounded-lg"
-                    />
-                  </CardContent>
-                </Card>
-                
-                {/* Background glow */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-lg blur-xl -z-10 scale-110"></div>
-              </div>
-            </div>
+
           </div>
 
           {/* Values Grid */}

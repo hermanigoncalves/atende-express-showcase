@@ -2,8 +2,10 @@ import { Globe, Bot, Settings, Users, ArrowRight, CheckCircle } from "lucide-rea
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
+  const navigate = useNavigate();
   const services = [
     {
       icon: Globe,
@@ -24,16 +26,6 @@ const Services = () => {
       color: "from-purple-500 to-pink-500",
       bgColor: "bg-purple-50",
       borderColor: "border-purple-200"
-    },
-    {
-      icon: Settings,
-      title: "Automação Omnichannel",
-      subtitle: "Integração Completa",
-      description: "Integramos todos os canais de comunicação para uma experiência unificada, eficiente e sem atritos.",
-      features: ["Multi-canais", "Automação Total", "Fluxos Inteligentes", "Métricas Avançadas"],
-      color: "from-green-500 to-emerald-500",
-      bgColor: "bg-green-50",
-      borderColor: "border-green-200"
     },
     {
       icon: Users,
@@ -113,10 +105,17 @@ const Services = () => {
                 
                 {/* CTA */}
                 <Button 
-                  variant="outline" 
-                  className="w-full group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300"
-                  onClick={scrollToContact}
-                >
+                    className="w-full group-hover:bg-primary group-hover:text-white group-hover:border-primary transition-all duration-300"
+                    onClick={() => {
+                      if (index === 0) {
+                        navigate('/sites-responsivos');
+                      } else if (index === 1) {
+                        navigate('/agentes-ia');
+                      } else {
+                        scrollToContact();
+                      }
+                    }}
+                  >
                   Saiba Mais
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
