@@ -39,16 +39,16 @@ const Navigation = () => {
           ? "bg-navy-blue/95 backdrop-blur-md border-b border-vibrant-blue/20 shadow-lg" 
           : "bg-navy-blue/80 backdrop-blur-sm"
       )}>
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <div className="flex items-center space-x-3">
+        <div className="container mx-auto px-3 sm:px-4">
+          <div className="flex items-center justify-between h-16 sm:h-20">
+            {/* Logo - Mobile Optimized */}
+            <div className="flex items-center space-x-2 sm:space-x-3">
               <img 
                 src="/logo.png" 
                 alt="Atende Express" 
-                className="h-10 w-auto object-contain" 
+                className="h-8 sm:h-10 w-auto object-contain" 
               />
-              <span className="text-xl font-bold text-white hidden sm:block">
+              <span className="text-lg sm:text-xl font-bold text-white hidden sm:block">
                 Atende Express
               </span>
             </div>
@@ -99,35 +99,35 @@ const Navigation = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Optimized */}
       <div className={cn(
         "fixed inset-0 z-40 lg:hidden transition-all duration-300",
         isOpen ? "opacity-100 visible" : "opacity-0 invisible"
       )}>
         <div className="absolute inset-0 bg-navy-blue/95 backdrop-blur-md" />
-        <div className="relative flex flex-col items-center justify-center h-full space-y-8">
+        <div className="relative flex flex-col items-center justify-center h-full space-y-6 px-4">
           {navItems.map((item) => (
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className="text-2xl font-medium text-white hover:text-vibrant-blue transition-colors duration-200"
+              className="text-xl sm:text-2xl font-medium text-white hover:text-vibrant-blue transition-colors duration-200 py-2"
             >
               {item.label}
             </button>
           ))}
-          <div className="flex flex-col items-center space-y-4 mt-8">
-            <div className="flex items-center space-x-2 text-white/70">
-              <Phone className="h-5 w-5" />
-              <span>(11) 99999-9999</span>
+          <div className="flex flex-col items-center space-y-3 mt-6 pt-6 border-t border-white/20">
+            <div className="flex items-center space-x-2 text-sm text-white/70">
+              <Phone className="h-4 w-4" />
+              <span>(33) 99944-1548</span>
             </div>
-            <div className="flex items-center space-x-2 text-white/70">
-              <Mail className="h-5 w-5" />
+            <div className="flex items-center space-x-2 text-sm text-white/70">
+              <Mail className="h-4 w-4" />
               <span>contato@atendeexpress.com</span>
             </div>
             <Button 
               variant="default" 
               onClick={() => scrollToSection('contato')}
-              className="bg-energetic-orange hover:bg-energetic-orange/90 text-white border-0 mt-4"
+              className="bg-energetic-orange hover:bg-energetic-orange/90 text-white border-0 mt-3 px-6 py-2"
             >
               Fale Conosco
             </Button>

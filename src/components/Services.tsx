@@ -45,36 +45,36 @@ const Services = () => {
   };
 
   return (
-    <section id="servicos" className="py-20 bg-gradient-to-b from-card/50 to-background">
-      <div className="container mx-auto px-4">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <Badge variant="secondary" className="mb-4 bg-primary/10 text-primary border-primary/20">
+    <section id="servicos" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-card/50 to-background">
+      <div className="container mx-auto px-3 sm:px-4">
+        {/* Header - Mobile Optimized */}
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <Badge variant="secondary" className="mb-3 sm:mb-4 bg-primary/10 text-primary border-primary/20 text-xs sm:text-sm">
             Nossos Serviços
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-foreground px-2">
             Soluções <span className="text-primary">Completas</span> para seu Negócio
           </h2>
-          <p className="text-lg text-black max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-2">
             Transformamos seu atendimento digital com tecnologia de ponta, design excepcional e inteligência artificial avançada
           </p>
         </div>
         
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 gap-8 mb-16">
+        {/* Services Grid - Mobile Optimized */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 mb-8 sm:mb-12 lg:mb-16">
           {services.map((service, index) => (
-            <Card key={index} className={`group hover:shadow-2xl transition-all duration-500 border-2 hover:${service.borderColor} hover:-translate-y-2 bg-gradient-to-br from-white to-gray-50/50`}>
-              <CardHeader className="pb-4">
+            <Card key={index} className={`group hover:shadow-2xl transition-all duration-500 border-2 hover:${service.borderColor} hover:-translate-y-1 sm:hover:-translate-y-2 bg-gradient-to-br from-white to-gray-50/50`}>
+              <CardHeader className="pb-3 sm:pb-4">
                 <div className="flex items-start justify-between">
-                  <div className="flex items-center space-x-4">
-                    <div className={`p-4 rounded-2xl bg-gradient-to-r ${service.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                      <service.icon className="h-8 w-8 text-white" />
+                  <div className="flex items-center space-x-3 sm:space-x-4">
+                    <div className={`p-3 sm:p-4 rounded-2xl bg-gradient-to-r ${service.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      <service.icon className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-primary transition-colors">
+                      <h3 className="text-lg sm:text-xl font-bold text-slate-800 group-hover:text-primary transition-colors">
                         {service.title}
                       </h3>
-                      <p className="text-sm text-black font-medium">
+                      <p className="text-xs sm:text-sm text-slate-700 font-medium">
                         {service.subtitle}
                       </p>
                     </div>
@@ -85,19 +85,19 @@ const Services = () => {
                 </div>
               </CardHeader>
               
-              <CardContent className="space-y-6">
-                <p className="text-black leading-relaxed">
+              <CardContent className="space-y-4 sm:space-y-6">
+                <p className="text-sm sm:text-base text-slate-800 leading-relaxed">
                   {service.description}
                 </p>
                 
-                {/* Features List */}
-                <div className="space-y-3">
-                  <h4 className="font-semibold text-gray-900 text-sm">Principais Benefícios:</h4>
-                  <div className="grid grid-cols-2 gap-2">
+                {/* Features List - Mobile Optimized */}
+                <div className="space-y-2 sm:space-y-3">
+                  <h4 className="font-semibold text-slate-800 text-xs sm:text-sm">Principais Benefícios:</h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-2">
                     {service.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                        <span className="text-sm text-black">{feature}</span>
+                        <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-green-500 flex-shrink-0" />
+                        <span className="text-xs sm:text-sm text-slate-700">{feature}</span>
                       </div>
                     ))}
                   </div>
@@ -124,21 +124,21 @@ const Services = () => {
           ))}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 rounded-2xl p-8 border border-primary/20">
-          <h3 className="text-2xl font-bold text-foreground mb-4">
+        {/* Bottom CTA - Mobile Optimized */}
+        <div className="text-center bg-gradient-to-r from-primary/10 via-secondary/10 to-accent/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 border border-primary/20 mx-2 sm:mx-0">
+          <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3 sm:mb-4 px-2">
             Pronto para Transformar seu Atendimento?
           </h3>
-          <p className="text-black mb-6 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 max-w-2xl mx-auto px-2">
             Entre em contato conosco e descubra como podemos revolucionar a experiência dos seus clientes
           </p>
           <Button 
             size="lg" 
             onClick={scrollToContact}
-            className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white shadow-lg hover:shadow-xl transition-all duration-300"
+            className="bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white shadow-lg hover:shadow-xl transition-all duration-300 w-full sm:w-auto px-6 py-3"
           >
             Fale Conosco Agora
-            <ArrowRight className="ml-2 h-4 w-4" />
+            <ArrowRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
           </Button>
         </div>
       </div>

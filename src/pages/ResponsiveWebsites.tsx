@@ -14,7 +14,7 @@ const ResponsiveWebsites = () => {
         <Button 
           variant="ghost" 
           onClick={() => navigate('/')}
-          className="mb-6 text-gray-600 hover:text-gray-900"
+          className="mb-6 text-muted-foreground hover:text-foreground"
         >
           <ArrowLeft className="mr-2 h-4 w-4" />
           Voltar ao Início
@@ -24,11 +24,11 @@ const ResponsiveWebsites = () => {
           <Badge className="mb-4 bg-blue-50 text-blue-700 border-blue-200">
             Sites Responsivos
           </Badge>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Sites que se Adaptam a
             <span className="text-blue-600 block">Qualquer Dispositivo</span>
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Desenvolvemos sites responsivos que oferecem uma experiência perfeita 
             em smartphones, tablets e desktops, garantindo que seus clientes tenham 
             acesso otimizado ao seu negócio em qualquer lugar.
@@ -74,7 +74,7 @@ const ResponsiveWebsites = () => {
       {/* Benefits Section */}
       <div className="bg-white py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+          <h2 className="text-3xl font-bold text-center text-foreground mb-12">
             Por que ter um Site Responsivo ajuda a Vender Mais?
           </h2>
           
@@ -196,10 +196,10 @@ const ResponsiveWebsites = () => {
 
       {/* CTA Section */}
       <div className="container mx-auto px-4 py-16 text-center">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        <h2 className="text-3xl font-bold text-foreground mb-6">
           Pronto para ter um Site Responsivo?
         </h2>
-        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+        <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
           Entre em contato conosco e descubra como podemos criar um site 
           que funciona perfeitamente em todos os dispositivos.
         </p>

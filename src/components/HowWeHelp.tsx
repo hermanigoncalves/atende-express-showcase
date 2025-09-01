@@ -101,7 +101,7 @@ const HowWeHelp = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
               Transformamos <span className="text-primary">Sua Empresa</span> Digitalmente
             </h2>
-            <p className="text-lg text-black max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Três pilares fundamentais para revolucionar seu atendimento digital e acelerar o crescimento do seu negócio
             </p>
           </div>
@@ -118,23 +118,23 @@ const HowWeHelp = () => {
                   <h3 className="text-2xl font-bold text-blue-600 group-hover:text-primary transition-colors mb-2">
                     {area.title}
                   </h3>
-                  <p className="text-sm text-black font-medium">
+                  <p className="text-sm text-slate-700 font-medium">
                     {area.subtitle}
                   </p>
                 </CardHeader>
                 
                 <CardContent className="space-y-6">
-                  <p className="text-black leading-relaxed">
+                  <p className="text-slate-800 leading-relaxed">
                     {area.description}
                   </p>
                   
                   <div className="space-y-3">
-                    <h4 className="font-semibold text-foreground text-sm">Principais Benefícios:</h4>
+                    <h4 className="font-semibold text-slate-800 text-sm">Principais Benefícios:</h4>
                     <div className="space-y-2">
                       {area.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center justify-center space-x-2">
                           <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                          <span className="text-sm text-black">{feature}</span>
+                          <span className="text-sm text-slate-700">{feature}</span>
                         </div>
                       ))}
                     </div>
@@ -156,7 +156,7 @@ const HowWeHelp = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
               Como <span className="text-secondary">Trabalhamos</span> com Você
             </h2>
-            <p className="text-lg text-black max-w-3xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Um processo estruturado e transparente para garantir o sucesso do seu projeto
             </p>
           </div>
@@ -178,7 +178,7 @@ const HowWeHelp = () => {
                   <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-secondary transition-colors">
                     {step.title}
                   </h3>
-                  <p className="text-black text-sm leading-relaxed">
+                  <p className="text-slate-700 text-sm leading-relaxed">
                     {step.description}
                   </p>
                 </Card>
@@ -224,32 +224,32 @@ const HowWeHelp = () => {
             
             {/* Contact Form */}
             <Card className="p-8 border-2 border-primary/20 bg-gradient-to-br from-white to-gray-50/50">
-              <h3 className="text-2xl font-bold text-black mb-6">Solicite um Orçamento</h3>
+              <h3 className="text-2xl font-bold text-slate-800 mb-6">Solicite um Orçamento</h3>
               <form className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Nome</label>
+                    <label className="block text-sm font-medium text-slate-700 mb-2">Nome</label>
                     <Input placeholder="Seu nome completo" className="border-2 focus:border-primary" />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">E-mail</label>
+                    <label className="block text-sm font-medium text-slate-700 mb-2">E-mail</label>
                     <Input type="email" placeholder="seu@email.com" className="border-2 focus:border-primary" />
                   </div>
                 </div>
                 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Telefone</label>
+                    <label className="block text-sm font-medium text-slate-700 mb-2">Telefone</label>
                     <Input placeholder="(00) 00000-0000" className="border-2 focus:border-primary" />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-foreground mb-2">Empresa</label>
+                    <label className="block text-sm font-medium text-slate-700 mb-2">Empresa</label>
                     <Input placeholder="Nome da sua empresa" className="border-2 focus:border-primary" />
                   </div>
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Serviço de Interesse</label>
+                  <label className="block text-sm font-medium text-slate-700 mb-2">Serviço de Interesse</label>
                   <select className="w-full p-3 border-2 border-input rounded-md focus:border-primary focus:outline-none">
                     <option>Selecione um serviço</option>
                     <option>Site Responsivo</option>
@@ -261,7 +261,7 @@ const HowWeHelp = () => {
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Mensagem</label>
+                  <label className="block text-sm font-medium text-slate-700 mb-2">Mensagem</label>
                   <textarea 
                     className="w-full p-3 border-2 border-input rounded-md focus:border-primary focus:outline-none min-h-[120px]" 
                     placeholder="Conte-nos mais sobre seu projeto e objetivos..."
