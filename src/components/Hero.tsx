@@ -1,13 +1,16 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play, Star } from "lucide-react";
+import { ArrowRight, Play, Star, Sparkles, Zap, Target } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const logoPath = "/atende_express_logo_sem_hamburguer.png";
 
 const Hero = () => {
   const [currentWord, setCurrentWord] = useState(0);
   const words = ['Inteligente', 'Automatizado', 'Personalizado'];
+  const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -28,41 +31,56 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen bg-gradient-to-r from-navy-blue via-navy-blue/90 to-vibrant-blue/20 relative overflow-hidden pt-20">
-      {/* Variant 2: Horizontal Layout with Split Design */}
+    <section 
+      id="hero" 
+      ref={ref}
+      className="min-h-screen bg-gradient-to-br from-slate-modern via-slate-800 to-slate-modern-dark relative overflow-hidden"
+    >
+      {/* Modern Background with Animated Elements */}
       <div className="absolute inset-0">
-        {/* Geometric Background Pattern */}
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-vibrant-blue/10 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-1/3 h-2/3 bg-gradient-to-tr from-energetic-orange/5 to-transparent"></div>
-        
-        {/* Floating Elements */}
-        <div className="absolute top-20 right-20 w-32 h-32 border border-vibrant-blue/20 rounded-full animate-pulse"></div>
-        <div className="absolute bottom-32 left-16 w-24 h-24 bg-energetic-orange/10 rounded-lg rotate-45 animate-bounce"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-corporate/10 via-emerald-accent/10 to-slate-modern/10 opacity-50" />
+        <motion.div
+          animate={{ rotate: [0, 360] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          className="absolute top-20 right-20 w-64 h-64 border border-blue-corporate/20 rounded-full backdrop-blur-sm"
+        />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px]" />
       </div>
       
-      <div className="container mx-auto px-4 h-full relative z-10">
-        <div className="grid lg:grid-cols-12 gap-8 items-center min-h-[calc(100vh-5rem)]">
+      <div className="container mx-auto px-4 h-full relative z-10 pt-20">
+        <div className="flex justify-center items-center min-h-[calc(100vh-5rem)]">
           
-          {/* Left Side - Content (8 columns) */}
-          <div className="lg:col-span-8 space-y-8">
-            {/* Trust Indicators - Mobile Optimized */}
-            <div className="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6">
-              <Badge className="bg-vibrant-blue/20 text-vibrant-blue border-vibrant-blue/30 px-2 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm">
-                ⚡ +100 projetos entregues
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8 }}
+            className="space-y-8 text-center max-w-4xl"
+          >
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="flex flex-wrap gap-3 mb-6 justify-center"
+            >
+              <Badge className="bg-blue-corporate/20 text-blue-corporate-light border-blue-corporate/30 px-4 py-2 text-sm backdrop-blur-sm">
+                <Sparkles className="w-4 h-4 mr-2" />
+                +100 projetos entregues
               </Badge>
-              <Badge className="bg-energetic-orange/20 text-energetic-orange border-energetic-orange/30 px-2 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm">
-                🤖 Especialistas em IA
+              <Badge className="bg-emerald-accent/20 text-emerald-accent-light border-emerald-accent/30 px-4 py-2 text-sm backdrop-blur-sm">
+                <Zap className="w-4 h-4 mr-2" />
+                Especialistas em IA
               </Badge>
-              <Badge className="bg-white/10 text-white border-white/20 px-2 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm">
-                ⭐ 5.0 Avaliação
+              <Badge className="bg-neutral-warm/20 text-neutral-warm border-neutral-warm/30 px-4 py-2 text-sm backdrop-blur-sm">
+                <Star className="w-4 h-4 mr-2 fill-current" />
+                5.0 Avaliação
               </Badge>
-            </div>
+            </motion.div>
 
             {/* Main Headline - Mobile Optimized */}
             <div className="space-y-2 sm:space-y-4">
               <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
                 <span className="block text-white mb-1 sm:mb-2">Atendimento</span>
-                <span className="block bg-gradient-to-r from-vibrant-blue to-energetic-orange bg-clip-text text-transparent mb-1 sm:mb-2 transition-all duration-500 ease-in-out">
+                <span className="block bg-gradient-to-r from-blue-corporate to-emerald-accent bg-clip-text text-transparent mb-1 sm:mb-2 transition-all duration-500 ease-in-out">
                   {words[currentWord]}
                 </span>
                 <span className="block text-white/90 text-xl sm:text-2xl md:text-4xl lg:text-5xl font-medium">
@@ -78,12 +96,12 @@ const Hero = () => {
               Resultados comprovados em mais de 100 projetos.
             </p>
             
-            {/* CTA Buttons - Mobile Optimized */}
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:max-w-md">
+            {/* CTA Buttons - Centralized */}
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Button 
                 size="lg"
                 onClick={scrollToServices}
-                className="bg-energetic-orange hover:bg-energetic-orange/90 text-white font-semibold px-6 py-3 sm:px-8 sm:py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group border-0 w-full sm:w-auto"
+                className="bg-gradient-to-r from-blue-corporate to-emerald-accent hover:from-blue-corporate-dark hover:to-emerald-accent-dark text-white font-semibold px-6 py-3 sm:px-8 sm:py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group border-0 w-full sm:w-auto"
               >
                 Começar Agora
                 <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 group-hover:translate-x-1 transition-transform" />
@@ -99,11 +117,11 @@ const Hero = () => {
               </Button>
             </div>
 
-            {/* Stats - Mobile Optimized */}
-            <div className="flex flex-wrap gap-4 sm:gap-8 pt-6">
+            {/* Stats - Centralized */}
+            <div className="flex flex-wrap gap-4 sm:gap-8 pt-6 justify-center">
               <div className="flex items-center gap-2 sm:gap-3">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-vibrant-blue/20 rounded-full flex items-center justify-center">
-                  <span className="text-vibrant-blue font-bold text-sm sm:text-lg">98%</span>
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-corporate/20 rounded-full flex items-center justify-center">
+                  <span className="text-blue-corporate font-bold text-sm sm:text-lg">98%</span>
                 </div>
                 <div>
                   <div className="text-white font-semibold text-sm sm:text-base">Satisfação</div>
@@ -111,8 +129,8 @@ const Hero = () => {
                 </div>
               </div>
               <div className="flex items-center gap-2 sm:gap-3">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-energetic-orange/20 rounded-full flex items-center justify-center">
-                  <span className="text-energetic-orange font-bold text-sm sm:text-lg">24/7</span>
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-emerald-accent/20 rounded-full flex items-center justify-center">
+                  <span className="text-emerald-accent font-bold text-sm sm:text-lg">24/7</span>
                 </div>
                 <div>
                   <div className="text-white font-semibold text-sm sm:text-base">Atendimento</div>
@@ -120,8 +138,8 @@ const Hero = () => {
                 </div>
               </div>
               <div className="flex items-center gap-2 sm:gap-3">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-sm sm:text-lg">+300%</span>
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-slate-modern-light/20 rounded-full flex items-center justify-center">
+                  <span className="text-neutral-warm font-bold text-sm sm:text-lg">+300%</span>
                 </div>
                 <div>
                   <div className="text-white font-semibold text-sm sm:text-base">Conversões</div>
@@ -129,44 +147,14 @@ const Hero = () => {
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Right Side - Visual (4 columns) */}
-          <div className="lg:col-span-4 flex justify-center lg:justify-end">
-            <div className="relative">
-              {/* Main Logo Container - Variant 2 Style */}
-              <div className="relative bg-gradient-to-br from-white/95 to-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/20 w-[425px] md:w-[510px]">
-                <img 
-                    src="/logo.png" 
-                    alt="Atende Express" 
-                    className="h-80 md:h-96 w-auto object-contain"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = '/atende-express-logo.svg';
-                  }}
-                />
-                
-                {/* Floating Indicators */}
-                <div className="absolute -top-6 -right-6 bg-vibrant-blue text-white p-5 rounded-full shadow-lg animate-pulse">
-                  <Star className="h-8 w-8 fill-current" />
-                </div>
-                <div className="absolute -bottom-6 -left-6 bg-energetic-orange text-white p-5 rounded-full shadow-lg">
-                  <Play className="h-8 w-8 fill-current" />
-                </div>
-              </div>
-              
-              {/* Background Effects */}
-              <div className="absolute inset-0 bg-gradient-to-r from-vibrant-blue/10 to-energetic-orange/10 rounded-2xl blur-xl -z-10 scale-110"></div>
-              <div className="absolute -inset-4 bg-white/5 rounded-3xl -z-20"></div>
-            </div>
-          </div>
+          </motion.div>
         </div>
       </div>
       
       {/* Scroll Indicator - Variant 2 Style */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center backdrop-blur-sm">
-          <div className="w-1 h-3 bg-energetic-orange rounded-full mt-2 animate-pulse"></div>
+          <div className="w-1 h-3 bg-emerald-accent rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
     </section>

@@ -8,27 +8,27 @@ const ResponsiveWebsites = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-neutral-warm/20 to-slate-modern/10">
       {/* Header */}
       <div className="container mx-auto px-4 py-8">
         <Button 
           variant="ghost" 
           onClick={() => navigate('/')}
-          className="mb-6 text-muted-foreground hover:text-foreground"
+          className="mb-6 text-neutral-warm hover:text-foreground"
         >
           <ArrowLeft className="mr-2 h-4 w-4" />
           Voltar ao Início
         </Button>
         
         <div className="text-center mb-12">
-          <Badge className="mb-4 bg-blue-50 text-blue-700 border-blue-200">
+          <Badge className="mb-4 bg-blue-corporate/10 text-blue-corporate border-blue-corporate/20 backdrop-blur-sm">
             Sites Responsivos
           </Badge>
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Sites que se Adaptam a
-            <span className="text-blue-600 block">Qualquer Dispositivo</span>
+            <span className="text-blue-corporate block">Qualquer Dispositivo</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-neutral-warm max-w-3xl mx-auto leading-relaxed">
             Desenvolvemos sites responsivos que oferecem uma experiência perfeita 
             em smartphones, tablets e desktops, garantindo que seus clientes tenham 
             acesso otimizado ao seu negócio em qualquer lugar.
@@ -39,7 +39,7 @@ const ResponsiveWebsites = () => {
       {/* Devices Showcase */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gradient-to-r from-navy-blue to-vibrant-blue rounded-2xl p-8 text-white shadow-xl border border-navy-blue/20">
+          <div className="bg-gradient-to-r from-slate-modern to-blue-corporate rounded-2xl p-8 text-white shadow-xl border border-blue-corporate/20 backdrop-blur-sm">
             <div className="flex items-center mb-6">
               <Smartphone className="h-12 w-12 text-white/80 mr-4" />
               <h3 className="text-2xl font-bold">Mobile First</h3>
@@ -49,7 +49,7 @@ const ResponsiveWebsites = () => {
             </p>
           </div>
 
-          <div className="bg-gradient-to-r from-navy-blue to-vibrant-blue rounded-2xl p-8 text-white shadow-xl border border-vibrant-blue/20">
+          <div className="bg-gradient-to-r from-blue-corporate to-emerald-accent rounded-2xl p-8 text-white shadow-xl border border-emerald-accent/20 backdrop-blur-sm">
             <div className="flex items-center mb-6">
               <Tablet className="h-12 w-12 text-white/80 mr-4" />
               <h3 className="text-2xl font-bold">Tablets Otimizados</h3>
@@ -59,7 +59,7 @@ const ResponsiveWebsites = () => {
             </p>
           </div>
 
-          <div className="bg-gradient-to-r from-navy-blue to-vibrant-blue rounded-2xl p-8 text-white shadow-xl border border-navy-blue/20">
+          <div className="bg-gradient-to-r from-slate-modern to-blue-corporate rounded-2xl p-8 text-white shadow-xl border border-blue-corporate/20 backdrop-blur-sm">
             <div className="flex items-center mb-6">
               <Monitor className="h-12 w-12 text-white/80 mr-4" />
               <h3 className="text-2xl font-bold">Desktop Completo</h3>
@@ -80,69 +80,69 @@ const ResponsiveWebsites = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
              <div className="bg-gradient-to-br from-navy-blue/10 to-vibrant-blue/20 p-6 rounded-xl border border-vibrant-blue/30">
-               <div className="bg-vibrant-blue w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+               <div className="bg-blue-corporate w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                  <Users className="h-6 w-6 text-white" />
                </div>
-               <h3 className="text-xl font-semibold text-navy-blue mb-3">
+               <h3 className="text-xl font-semibold text-foreground mb-3">
                  Melhora a Experiência do Usuário
                </h3>
-               <div className="space-y-2 text-navy-blue/80">
+               <div className="space-y-2 text-foreground/80">
                  <p><strong>Navegação fácil:</strong> Clientes podem acessar seu site de qualquer lugar, a qualquer momento, sem ter que dar zoom ou rolar excessivamente.</p>
                  <p><strong>Maior tempo no site:</strong> Uma experiência agradável faz com que os visitantes permaneçam mais tempo no seu site, aumentando as chances de compra.</p>
                </div>
              </div>
  
              <div className="bg-gradient-to-br from-vibrant-blue/10 to-navy-blue/20 p-6 rounded-xl border border-navy-blue/30">
-               <div className="bg-navy-blue w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+               <div className="bg-emerald-accent w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                  <TrendingUp className="h-6 w-6 text-white" />
                </div>
-               <h3 className="text-xl font-semibold text-navy-blue mb-3">
+               <h3 className="text-xl font-semibold text-foreground mb-3">
                  Otimização para SEO
                </h3>
-               <p className="text-navy-blue/80">
+               <p className="text-foreground/80">
                  O Google e outros buscadores priorizam sites responsivos em seus resultados de pesquisa, especialmente em buscas feitas por dispositivos móveis. Isso significa que seu site tem mais chances de aparecer nas primeiras posições, atraindo mais tráfego orgânico e potenciais clientes.
                </p>
              </div>
  
              <div className="bg-gradient-to-br from-energetic-orange/10 to-vibrant-blue/20 p-6 rounded-xl border border-energetic-orange/30">
-               <div className="bg-energetic-orange w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+               <div className="bg-slate-modern w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                  <Zap className="h-6 w-6 text-white" />
                </div>
-               <h3 className="text-xl font-semibold text-navy-blue mb-3">
+               <h3 className="text-xl font-semibold text-foreground mb-3">
                  Aumento da Taxa de Conversão
                </h3>
-               <p className="text-navy-blue/80">
+               <p className="text-foreground/80">
                  Quando um site é fácil de usar e navegar em qualquer dispositivo, as pessoas estão mais propensas a concluir uma compra, preencher um formulário ou entrar em contato. Menos atrito no processo de compra se traduz em mais vendas.
                </p>
              </div>
  
              <div className="bg-gradient-to-br from-navy-blue/10 to-vibrant-blue/15 p-6 rounded-xl border border-vibrant-blue/30">
-               <div className="bg-vibrant-blue w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+               <div className="bg-blue-corporate w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                  <Smartphone className="h-6 w-6 text-white" />
                </div>
-               <h3 className="text-xl font-semibold text-navy-blue mb-3">
+               <h3 className="text-xl font-semibold text-foreground mb-3">
                  Alcance Maior de Público
                </h3>
-               <p className="text-navy-blue/80">
+               <p className="text-foreground/80">
                  Cada vez mais pessoas usam smartphones para navegar na internet e fazer compras. Ter um site responsivo garante que você não está perdendo essa fatia significativa do mercado.
                </p>
              </div>
  
              <div className="bg-gradient-to-br from-vibrant-blue/10 to-navy-blue/15 p-6 rounded-xl border border-navy-blue/30">
-               <div className="bg-navy-blue w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+               <div className="bg-emerald-accent w-12 h-12 rounded-lg flex items-center justify-center mb-4">
                  <TrendingUp className="h-6 w-6 text-white" />
                </div>
-               <h3 className="text-xl font-semibold text-navy-blue mb-3">
+               <h3 className="text-xl font-semibold text-foreground mb-3">
                  Competitividade
                </h3>
-               <p className="text-navy-blue/80">
+               <p className="text-foreground/80">
                  A maioria dos seus concorrentes já deve ter um site responsivo. Para se manter relevante e competitivo no mercado digital, é fundamental oferecer a mesma facilidade aos seus clientes.
                </p>
              </div>
            </div>
 
           {/* Summary Box */}
-           <div className="bg-gradient-to-r from-navy-blue to-vibrant-blue rounded-2xl p-8 text-white">
+           <div className="bg-gradient-to-r from-slate-modern to-blue-corporate rounded-2xl p-8 text-white">
              <h3 className="text-2xl font-bold mb-6 text-center">
                Em Resumo, ter um Site Responsivo é Essencial porque:
              </h3>
@@ -199,7 +199,7 @@ const ResponsiveWebsites = () => {
         <h2 className="text-3xl font-bold text-foreground mb-6">
           Pronto para ter um Site Responsivo?
         </h2>
-        <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+        <p className="text-xl text-neutral-warm mb-8 max-w-2xl mx-auto">
           Entre em contato conosco e descubra como podemos criar um site 
           que funciona perfeitamente em todos os dispositivos.
         </p>

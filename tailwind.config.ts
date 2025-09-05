@@ -60,22 +60,27 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				// Nova Paleta Atende Express
-				'navy-blue': {
-					DEFAULT: 'hsl(220 50% 15%)', // Azul-Marinho
-					light: 'hsl(220 40% 25%)',
-					dark: 'hsl(220 60% 10%)'
+				// Paleta Moderna e Empresarial
+				'slate-modern': {
+					DEFAULT: 'hsl(215 28% 17%)', // Cinza-Azulado Escuro
+					light: 'hsl(215 20% 25%)',
+					dark: 'hsl(215 35% 12%)'
 				},
-				'vibrant-blue': {
-					DEFAULT: 'hsl(210 100% 50%)', // Azul-Vibrante
-					light: 'hsl(210 100% 60%)',
-					dark: 'hsl(210 100% 40%)'
+				'blue-corporate': {
+					DEFAULT: 'hsl(210 80% 56%)', // Azul Corporativo
+					light: 'hsl(210 85% 65%)',
+					dark: 'hsl(210 75% 45%)'
 				},
-				'energetic-orange': {
-					DEFAULT: 'hsl(25 100% 55%)', // Laranja-Energético
-					light: 'hsl(25 100% 65%)',
-					dark: 'hsl(25 100% 45%)'
-				}
+				'emerald-accent': {
+					DEFAULT: 'hsl(158 64% 52%)', // Verde-Esmeralda
+					light: 'hsl(158 64% 62%)',
+					dark: 'hsl(158 64% 42%)'
+				},
+				'neutral-warm': {
+					DEFAULT: 'hsl(60 5% 96%)', // Branco Quente
+					light: 'hsl(60 9% 98%)',
+					dark: 'hsl(60 2% 88%)'
+				},
 			},
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',

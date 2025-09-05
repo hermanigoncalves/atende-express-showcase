@@ -6,14 +6,14 @@ const AIAgents = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-neutral-warm/10 to-slate-modern/5">
       {/* Header */}
-      <div className="bg-gradient-to-r from-navy-blue via-navy-blue/90 to-vibrant-blue/20 text-white py-20">
+      <div className="bg-gradient-to-r from-slate-modern via-slate-modern/90 to-blue-corporate/20 text-white py-20">
         <div className="container mx-auto px-4">
           <Button 
             onClick={() => navigate('/')}
             variant="outline" 
-            className="mb-8 text-white border-white/30 hover:bg-white/10"
+            className="mb-8 text-white border-white/30 hover:bg-white/10 backdrop-blur-sm"
           >
             <ArrowLeft className="mr-2 h-4 w-4" />
             Voltar ao Início
@@ -21,7 +21,7 @@ const AIAgents = () => {
           
           <div className="max-w-4xl">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-              Como Funciona um <span className="bg-gradient-to-r from-vibrant-blue to-energetic-orange bg-clip-text text-transparent">Agente de IA</span> para Atendimento?
+              Como Funciona um <span className="bg-gradient-to-r from-blue-corporate to-emerald-accent bg-clip-text text-transparent">Agente de IA</span> para Atendimento?
             </h1>
             <p className="text-xl text-white/90 leading-relaxed">
               Descubra como a inteligência artificial pode revolucionar seu atendimento ao cliente e impulsionar suas vendas 24 horas por dia.
@@ -33,14 +33,14 @@ const AIAgents = () => {
       {/* Canais de Atendimento */}
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-navy-blue mb-4">Canais de Interação</h2>
-          <p className="text-xl text-navy-blue/80 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-foreground mb-4">Canais de Interação</h2>
+          <p className="text-xl text-neutral-warm max-w-3xl mx-auto">
             Um agente de IA pode interagir com seus clientes através de diferentes canais de comunicação
           </p>
         </div>
         
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <div className="bg-gradient-to-r from-navy-blue to-vibrant-blue rounded-2xl p-8 text-white shadow-xl border border-navy-blue/20">
+          <div className="bg-gradient-to-r from-slate-modern to-blue-corporate rounded-2xl p-8 text-white shadow-xl border border-blue-corporate/20 backdrop-blur-sm">
             <div className="flex items-center mb-6">
               <MessageSquare className="h-12 w-12 text-white/80 mr-4" />
               <h3 className="text-2xl font-bold">Chatbots</h3>
@@ -50,7 +50,7 @@ const AIAgents = () => {
             </p>
           </div>
 
-          <div className="bg-gradient-to-r from-navy-blue to-vibrant-blue rounded-2xl p-8 text-white shadow-xl border border-vibrant-blue/20">
+          <div className="bg-gradient-to-r from-blue-corporate to-emerald-accent rounded-2xl p-8 text-white shadow-xl border border-emerald-accent/20 backdrop-blur-sm">
             <div className="flex items-center mb-6">
               <Phone className="h-12 w-12 text-white/80 mr-4" />
               <h3 className="text-2xl font-bold">Assistentes de Voz</h3>
@@ -60,7 +60,7 @@ const AIAgents = () => {
             </p>
           </div>
 
-          <div className="bg-gradient-to-r from-navy-blue to-vibrant-blue rounded-2xl p-8 text-white shadow-xl border border-navy-blue/20">
+          <div className="bg-gradient-to-r from-slate-modern to-blue-corporate rounded-2xl p-8 text-white shadow-xl border border-blue-corporate/20 backdrop-blur-sm">
             <div className="flex items-center mb-6">
               <Mail className="h-12 w-12 text-white/80 mr-4" />
               <h3 className="text-2xl font-bold">E-mail Inteligente</h3>
@@ -73,17 +73,17 @@ const AIAgents = () => {
       </div>
 
       {/* Diferenciais da IA */}
-      <div className="bg-gray-50 py-16">
+      <div className="bg-gradient-to-b from-neutral-warm/20 to-slate-modern/10 py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-navy-blue mb-4">O Poder do Processamento de Linguagem Natural</h2>
-            <p className="text-xl text-navy-blue/80 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-foreground mb-4">O Poder do Processamento de Linguagem Natural</h2>
+            <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
               A principal diferença entre um agente de IA e respostas pré-programadas
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gradient-to-r from-navy-blue to-vibrant-blue rounded-2xl p-8 text-white shadow-xl border border-navy-blue/20">
+            <div className="bg-gradient-to-r from-slate-modern to-blue-corporate rounded-2xl p-8 text-white shadow-xl border border-blue-corporate/20 backdrop-blur-sm">
               <div className="flex items-center mb-6">
                 <Target className="h-12 w-12 text-white/80 mr-4" />
                 <h3 className="text-2xl font-bold text-white">Entende a Intenção</h3>
@@ -93,7 +93,7 @@ const AIAgents = () => {
               </p>
             </div>
 
-            <div className="bg-gradient-to-r from-navy-blue to-vibrant-blue rounded-2xl p-8 text-white shadow-xl border border-vibrant-blue/20">
+            <div className="bg-gradient-to-r from-blue-corporate to-emerald-accent rounded-2xl p-8 text-white shadow-xl border border-emerald-accent/20 backdrop-blur-sm">
               <div className="flex items-center mb-6">
                 <TrendingUp className="h-12 w-12 text-white/80 mr-4" />
                 <h3 className="text-2xl font-bold text-white">Aprende e Melhora</h3>
@@ -103,7 +103,7 @@ const AIAgents = () => {
               </p>
             </div>
 
-            <div className="bg-gradient-to-r from-navy-blue to-vibrant-blue rounded-2xl p-8 text-white shadow-xl border border-navy-blue/20">
+            <div className="bg-gradient-to-r from-slate-modern to-blue-corporate rounded-2xl p-8 text-white shadow-xl border border-blue-corporate/20 backdrop-blur-sm">
               <div className="flex items-center mb-6">
                 <Zap className="h-12 w-12 text-white/80 mr-4" />
                 <h3 className="text-2xl font-bold text-white">Tarefas Complexas</h3>
@@ -119,14 +119,14 @@ const AIAgents = () => {
       {/* Como Impulsiona Vendas */}
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-navy-blue mb-4">Como um Agente de IA Impulsiona as Vendas?</h2>
-          <p className="text-xl text-navy-blue/80 max-w-3xl mx-auto">
+          <h2 className="text-4xl font-bold text-foreground mb-4">Como um Agente de IA Impulsiona as Vendas?</h2>
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
             Muito além de responder perguntas, a IA cria oportunidades diretas para aumentar suas vendas
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          <div className="bg-gradient-to-r from-navy-blue to-vibrant-blue rounded-2xl p-8 text-white shadow-xl border border-navy-blue/20">
+          <div className="bg-gradient-to-r from-slate-modern to-blue-corporate rounded-2xl p-8 text-white shadow-xl border border-blue-corporate/20 backdrop-blur-sm">
             <div className="flex items-center mb-6">
               <Clock className="h-12 w-12 text-white/80 mr-4" />
               <h3 className="text-2xl font-bold text-white">Disponibilidade 24/7</h3>
@@ -136,7 +136,7 @@ const AIAgents = () => {
             </p>
           </div>
 
-          <div className="bg-gradient-to-r from-navy-blue to-vibrant-blue rounded-2xl p-8 text-white shadow-xl border border-vibrant-blue/20">
+          <div className="bg-gradient-to-r from-blue-corporate to-emerald-accent rounded-2xl p-8 text-white shadow-xl border border-emerald-accent/20 backdrop-blur-sm">
             <div className="flex items-center mb-6">
               <Users className="h-12 w-12 text-white/80 mr-4" />
               <h3 className="text-2xl font-bold text-white">Personalização em Escala</h3>
@@ -146,7 +146,7 @@ const AIAgents = () => {
             </p>
           </div>
 
-          <div className="bg-gradient-to-r from-navy-blue to-vibrant-blue rounded-2xl p-8 text-white shadow-xl border border-navy-blue/20">
+          <div className="bg-gradient-to-r from-slate-modern to-blue-corporate rounded-2xl p-8 text-white shadow-xl border border-blue-corporate/20 backdrop-blur-sm">
             <div className="flex items-center mb-6">
               <Target className="h-12 w-12 text-white/80 mr-4" />
               <h3 className="text-2xl font-bold text-white">Qualificação de Leads</h3>
@@ -156,7 +156,7 @@ const AIAgents = () => {
             </p>
           </div>
 
-          <div className="bg-gradient-to-r from-navy-blue to-vibrant-blue rounded-2xl p-8 text-white shadow-xl border border-vibrant-blue/20">
+          <div className="bg-gradient-to-r from-blue-corporate to-emerald-accent rounded-2xl p-8 text-white shadow-xl border border-emerald-accent/20 backdrop-blur-sm">
             <div className="flex items-center mb-6">
               <TrendingUp className="h-12 w-12 text-white/80 mr-4" />
               <h3 className="text-2xl font-bold text-white">Otimização do Funil</h3>
@@ -169,11 +169,11 @@ const AIAgents = () => {
       </div>
 
       {/* Exemplo Prático */}
-      <div className="bg-gray-50 py-16">
+      <div className="bg-gradient-to-b from-neutral-warm/20 to-slate-modern/10 py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-navy-blue mb-4">Exemplo Prático</h2>
-            <p className="text-xl text-navy-blue/80 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-foreground mb-4">Exemplo Prático</h2>
+            <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
               Veja a diferença na prática: loja de roupas online
             </p>
           </div>
@@ -181,7 +181,7 @@ const AIAgents = () => {
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-200">
               <h3 className="text-2xl font-bold text-red-600 mb-6">❌ Sem IA</h3>
-             <p className="text-slate-700 leading-relaxed">
+             <p className="text-neutral-warm leading-relaxed">
                 Cliente pergunta: "Vocês têm jaquetas de couro preta?"<br/><br/>
                 • Precisa esperar o próximo dia útil<br/>
                 • Pode se frustrar e sair do site<br/>
@@ -190,7 +190,7 @@ const AIAgents = () => {
               </p>
             </div>
 
-            <div className="bg-gradient-to-r from-navy-blue to-vibrant-blue rounded-2xl p-8 text-white shadow-xl">
+            <div className="bg-gradient-to-r from-slate-modern to-blue-corporate rounded-2xl p-8 text-white shadow-xl backdrop-blur-sm">
               <h3 className="text-2xl font-bold text-white mb-6">✅ Com IA</h3>
               <p className="text-white/90 leading-relaxed">
                 Resposta instantânea: "Sim, temos! Qual é o seu tamanho?"<br/><br/>
@@ -206,7 +206,7 @@ const AIAgents = () => {
 
       {/* Resumo */}
       <div className="container mx-auto px-4 py-16">
-        <div className="bg-gradient-to-r from-navy-blue to-vibrant-blue rounded-2xl p-8 text-white">
+        <div className="bg-gradient-to-r from-slate-modern to-blue-corporate rounded-2xl p-8 text-white backdrop-blur-sm">
           <h3 className="text-2xl font-bold mb-6 text-center">Em Resumo, um Agente de IA é Essencial porque:</h3>
           
           <div className="grid md:grid-cols-2 gap-4">
@@ -231,7 +231,7 @@ const AIAgents = () => {
       </div>
 
       {/* Call to Action */}
-      <div className="bg-gradient-to-r from-navy-blue via-navy-blue/90 to-vibrant-blue/20 text-white py-16">
+      <div className="bg-gradient-to-r from-slate-modern via-slate-modern/90 to-blue-corporate/20 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Pronto para Revolucionar seu Atendimento?</h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
@@ -240,7 +240,7 @@ const AIAgents = () => {
           <Button 
             onClick={() => navigate('/')}
             size="lg" 
-            className="bg-energetic-orange hover:bg-energetic-orange/90 text-white px-8 py-4 text-lg"
+            className="bg-gradient-to-r from-blue-corporate to-emerald-accent hover:from-blue-corporate-dark hover:to-emerald-accent-dark text-white px-8 py-4 text-lg"
           >
             Fale Conosco Agora
           </Button>
